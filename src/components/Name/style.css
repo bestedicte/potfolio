@@ -1,0 +1,65 @@
+.playful span {
+    position: relative;
+    color: #000;
+    text-shadow: -.08em .08em #e7b7ad;
+    transform: translate3d(.08em, -.08em, 0);
+    animation: none;
+}
+
+.playful:hover span {
+    animation: scatter 1s infinite alternate cubic-bezier(.86, 0, .07, 1);
+}
+
+.playful span:nth-last-child(n) {
+    animation-delay: -.1667s;
+}
+
+.playful span:nth-last-child(2n) {
+    animation-delay: -.3333s;
+}
+
+.playful span:nth-last-child(3n) {
+    animation-delay: -.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .playful span {
+        animation: none;
+    }
+}
+
+@keyframes scatter {
+    0% {
+        transform: translateZ(0);
+        text-shadow: 0 0 0 #e7b7ad;
+        color: #000;
+    }
+
+    30% {
+        transform: translateZ(0);
+        text-shadow: 0 0 0 #e7b7ad;
+        color: #000;
+    }
+
+    70% {
+        transform: translate3d(.08em, -.08em, 0);
+        text-shadow: -.08em .08em #e7b7ad;
+        color: #000;
+    }
+
+    100% {
+        transform: translate3d(.08em, -.08em, 0);
+        text-shadow: -.08em .08em #e7b7ad;
+        color: #000;
+    }
+}
+
+
+h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Archivo Black", Archivo, sans-serif;
+    font-weight: normal;
+    display: block;
+    height: auto;
+}
